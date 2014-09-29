@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.mycompany</groupId>
-    <artifactId>TestingProject</artifactId>
+    <artifactId>OnlineBusiness</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
@@ -21,12 +21,7 @@
             <version>7.0</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
-            <version>6.0</version>
-            <scope>provided</scope>
-        </dependency>
+        
         <dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -63,18 +58,7 @@
             <version>4.0.2.RELEASE</version>
         </dependency>
             
-		<!-- JSF library -->
-		<dependency>
-		  <groupId>com.sun.faces</groupId>
-		  <artifactId>jsf-api</artifactId>
-		  <version>2.1.6</version>
-		</dependency>
 		
-		<dependency>
-		  <groupId>com.sun.faces</groupId>
-		  <artifactId>jsf-impl</artifactId>
-		  <version>2.1.6</version>
-		</dependency>
 			
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -82,12 +66,7 @@
 			<version>1.2</version>
 		</dependency>
 		
-<!--		 Primefaces library 
- 		<dependency>
-			<groupId>org.primefaces</groupId>
-			<artifactId>primefaces</artifactId>
-			<version>3.1.1</version>
-		</dependency>-->
+
 
 		<!-- Hibernate library -->
 		<dependency>
@@ -96,11 +75,6 @@
 			<version>4.1.0.Final</version>
 		</dependency>
             		
-		<dependency>
-			<groupId>javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.12.1.GA</version>
-		</dependency>
 		
 		<!-- MySQL Java Connector library -->
 		<dependency>
@@ -109,12 +83,7 @@
 			<version>5.1.17</version>
 		</dependency>
 		
-		<dependency>
-			<groupId>c3p0</groupId>
-			<artifactId>c3p0</artifactId>
-			<version>0.9.1.2</version>
-		</dependency>            
- 		
+		
 		<!-- Log4j library -->
 		<dependency>
 			<groupId>log4j</groupId>
@@ -122,11 +91,7 @@
 			<version>1.2.16</version>
 		</dependency>
 		
-        <dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.4</version>
-		</dependency>
+        
     </dependencies>
 
     <build>
