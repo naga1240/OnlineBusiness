@@ -3,16 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import javax.persistence.Entity;
 
 /**
  *
  * @author Naga
  */
-public class Services extends Product{
+@Entity
+public class Services extends Product {
     
     private float servicePeriod;
+    //@OneToOne
+////    private ServiceMaster serviceMaster;
+//
+//    public ServiceMaster getServiceMaster() {
+//        return serviceMaster;
+//    }
+//
+//    public void setServiceMaster(ServiceMaster serviceMaster) {
+//        this.serviceMaster = serviceMaster;
+//    }
 
     public Services() {
     }
@@ -29,6 +41,5 @@ public class Services extends Product{
     public void setServicePeriod(float servicePeriod) {
         this.servicePeriod = servicePeriod;
     }
-    
-    
+
 }

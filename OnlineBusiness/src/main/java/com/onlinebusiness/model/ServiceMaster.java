@@ -3,14 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  *
  * @author Naga
  */
+//@Entity
 public class ServiceMaster {
+
+  //  @Id
+    //@GeneratedValue
     private int id;
     private String serviceType;
     private float pricePerHour;
@@ -46,6 +53,5 @@ public class ServiceMaster {
     public void setPricePerHour(float pricePerHour) {
         this.pricePerHour = pricePerHour;
     }
-    
-    
+
 }

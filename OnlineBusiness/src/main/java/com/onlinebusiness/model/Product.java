@@ -3,18 +3,41 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author Naga
  */
-public class Product {
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private int id;
     private String name;
     private String category;
     private String description;
+
+    @ManyToOne
+    private Vendor vendor;
+
+    public Vendor getVendor() {
+        return vendor;
+    }
+
+    public void setVendor(Vendor vendor) {
+        this.vendor = vendor;
+    }
 
     public Product() {
     }
@@ -24,7 +47,7 @@ public class Product {
         this.category = category;
         this.description = description;
     }
-    
+
     public int getId() {
         return id;
     }
@@ -56,8 +79,5 @@ public class Product {
     public void setDescription(String description) {
         this.description = description;
     }
-    
-    
-    
-    
+
 }

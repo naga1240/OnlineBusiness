@@ -3,21 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import javax.persistence.Entity;
 
 /**
  *
  * @author Naga
  */
+@Entity
 public class Electronics extends Product {
+
     private long price;
     private float warranty;
 
     public Electronics() {
-      
+
     }
-    
+
     public Electronics(long price, float warranty, String name, String category, String description) {
         super(name, category, description);
         this.price = price;
@@ -39,8 +42,5 @@ public class Electronics extends Product {
     public void setWarranty(float warranty) {
         this.warranty = warranty;
     }
-    
-    
-    
-    
+
 }

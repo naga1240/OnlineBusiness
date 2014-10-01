@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import javax.persistence.Entity;
 
 /**
  *
  * @author Naga
  */
-public class Sports extends Product{
+@Entity
+public class Sports extends Product {
+
     private long price;
 
     public Sports() {
@@ -28,7 +31,5 @@ public class Sports extends Product{
     public void setPrice(long price) {
         this.price = price;
     }
-    
-    
-    
+
 }

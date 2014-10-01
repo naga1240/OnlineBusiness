@@ -3,17 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  *
  * @author Naga
  */
+@Entity
 public class Payment {
+
+    @Id
+    @GeneratedValue
     private int id;
     private long cardNumber;
     private int cvv;
+    @OneToOne
+    private Order order;
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
 
     public Payment() {
     }
@@ -46,7 +64,5 @@ public class Payment {
     public void setCvv(int cvv) {
         this.cvv = cvv;
     }
-    
-    
-    
+
 }

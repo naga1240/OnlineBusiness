@@ -3,14 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import javax.persistence.Entity;
 
 /**
  *
  * @author Naga
  */
+@Entity
 public class Employee extends User {
+
     private String name;
     private String address;
     private String contact;
@@ -26,6 +29,7 @@ public class Employee extends User {
         this.contact = contact;
         this.email = email;
     }
+
     public String getName() {
         return name;
     }
@@ -57,6 +61,5 @@ public class Employee extends User {
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
+
 }

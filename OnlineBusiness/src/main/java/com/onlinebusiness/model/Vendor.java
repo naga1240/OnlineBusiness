@@ -3,18 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.onlinebusiness.model;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author Naga
  */
+@Entity
 public class Vendor extends User {
-   
+
     private String name;
     private String details;
-    
+
+    @OneToMany(mappedBy = "vendor")
+    private List<Product> productList = new ArrayList<Product>();
+
+    public List<Product> getProductList() {
+        return productList;
+    }
+
+    public void setProductList(List<Product> productList) {
+        this.productList = productList;
+    }
 
     public Vendor() {
     }
@@ -24,6 +39,7 @@ public class Vendor extends User {
         this.name = name;
         this.details = details;
     }
+
     public String getName() {
         return name;
     }
@@ -40,7 +56,4 @@ public class Vendor extends User {
         this.details = details;
     }
 
-    
-    
-    
 }
