@@ -8,14 +8,14 @@
         <title>Login Page</title>
     </head>
     <body>
-         <!--<fieldset style="width: 40%; position: absolute;"><legend><h3>Login Page!</h3></legend>-->  
+         <fieldset style="width: 40%; position: absolute;"><legend><h3>Login Page!</h3></legend>  
         <h3>
         <table border="0">
             <tr>
         <h3>Language : <a href="?language=en">English</a>|
         <a href="?language=french">French</a> </h3>
     </tr>
-   <!--  Current Locale : ${pageContext.response.locale}  -->
+     Current Locale : ${pageContext.response.locale}  
    <tr> <h1><spring:message code="welcome.login" text="Login Page!"/></h1></tr>
        <tr> <c:if test="${error eq true}">
             <p>${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}</p>
@@ -29,12 +29,15 @@
            <tr align="left" colspan="2"><td><input type="submit" value='<spring:message code="welcome.submit" text="Submit"/>'/><br/></td></tr>
             <tr><td><spring:message code="welcome.forgetPassword" text="Forgot Username or Password - Contact Administrator"/></td>  </tr>    
         </form>
-            <tr align="left" colspan="2"><td><a href="register" ><h3><spring:message code="welcome.register" text="Register"/></h3></a> </td> </tr>
-            </h3>
+<!--           <tr align="left" colspan="2"><td><a href="register" ><h3><spring:message code="welcome.register" text="Register"/></h3></a> </td> </tr>
+            </h3>-->
 
             </table>
             
             <a href="logout">Logout</a>
-            <!--</fieldset>-->
+            <a href="register">Register</a>
+            
+            
+            </fieldset>
     </body>
 </html>
