@@ -29,5 +29,14 @@ public class LoginController {
         System.out.println("In logout");
         return "logout";
     }
-
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    public String welcome() {
+        System.out.println("In welcome");
+        return "welcome";
+    }
+    @RequestMapping(value = "/loginfailed")
+    public String loginfailed() {
+        System.out.println("In loginfailed");
+        return "loginfailed";
+    }
 }

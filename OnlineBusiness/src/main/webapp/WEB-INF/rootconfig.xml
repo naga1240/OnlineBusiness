@@ -11,7 +11,7 @@
 	http://www.springframework.org/schema/tx/spring-tx-3.2.xsd">
 
     <!-- import security config -->
-<!--    <import resource="springsecurity.xml" />-->
+    <import resource="springsecurity.xml" />
     
     <!-- needed for security tag lib expression support -->
 <!--    <bean id="webexpressionHandler" class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" /> -->
