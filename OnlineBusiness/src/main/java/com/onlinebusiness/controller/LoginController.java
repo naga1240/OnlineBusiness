@@ -42,4 +42,14 @@ public class LoginController {
         System.out.println("In loginfailed");
         return "loginfailed";
     }
+    @RequestMapping(value = "/loginsidebar")
+    public String loginsidebar() {
+        //System.out.println("In loginfailed");
+        return "loginsidebar";
+    }
+    @RequestMapping(value = "/loginframes")
+    public String loginframes() {
+        //System.out.println("In loginfailed");
+        return "loginframes";
+    }
 }

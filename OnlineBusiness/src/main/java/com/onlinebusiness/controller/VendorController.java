@@ -19,10 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class VendorController {
-    @RequestMapping(value = "addVendor", method = RequestMethod.POST)
-    public String register(Vendor vendor){
-        return "vendorSuccess";
-    }
+    
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String addVendor(Model model) {        
         model.addAttribute("Vendor", new Vendor());

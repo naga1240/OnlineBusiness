@@ -37,6 +37,7 @@
 
                 <a href="logout">Logout</a>
                 <a href="register">Register</a>
+                <a href="admin">Add Vendor</a>
 
 
         </fieldset>

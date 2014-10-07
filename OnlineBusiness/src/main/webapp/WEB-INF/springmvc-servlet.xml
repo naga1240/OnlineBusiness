@@ -66,7 +66,7 @@
         
     </bean>	
     <!-- Forwards requests to the "/addStudent" resource to the "addStudent" view --> 
-    <mvc:view-controller path="/" view-name="login"/>
+     <mvc:view-controller path="/" view-name="loginframes"/>
 <!--    <mvc:view-controller path="/logout" view-name="logout"/>-->
     <!--    <mvc:view-controller path="/login" view-name="index"/>-->
 	
