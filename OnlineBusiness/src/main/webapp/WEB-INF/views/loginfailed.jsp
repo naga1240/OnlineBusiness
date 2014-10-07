@@ -13,6 +13,6 @@
     </head>
     <body>
         <h1>Login Failed</h1>
-        <p>Please <a href="/login.jsp">login</a> again. 
+        <p>Please <a href="login">login</a> again. 
     </body>
 </html>

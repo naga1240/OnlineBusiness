@@ -6,11 +6,13 @@ import java.util.Map;
 import javax.persistence.EntityExistsException;
 import javax.persistence.PersistenceException;
 import javax.persistence.Query;
-
 import javax.persistence.TransactionRequiredException;
 import org.hibernate.SQLQuery;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+
 
 /**
  *
@@ -24,14 +26,17 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @version 0.0.1
  * @param <T>
  */
+
 public class CRUDFacade<T> implements EntityFacade<T> {
     
-    @Autowired
-    SessionFactory sessionFactory;
+    //Autowired
+    private SessionFactory sessionFactory;
 
     @Override
     public T create(T entity) throws EntityExistsException, IllegalStateException, IllegalArgumentException, TransactionRequiredException {
-      sessionFactory.getCurrentSession().save(entity);
+      
+        sessionFactory.getCurrentSession().save(entity);
+        System.out.println("Here i save the entity");
       return entity;
     }
 
@@ -96,20 +101,14 @@ public class CRUDFacade<T> implements EntityFacade<T> {
         return query.getResultList();
     }
 
-    @Override
-    public List findWithNamedQuery(String namedQueryName, Map<String, String> parameters, int resultLimit) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     @Override
     public Object findWithNativeQuery(String queryName) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public List findWithNamedQuery(String namedQueryName, Map<String, String> parameters, Map<String, Long> parameters2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     @Override
     public List getAll(T entity) {
@@ -121,6 +120,12 @@ public class CRUDFacade<T> implements EntityFacade<T> {
          SQLQuery sqlqry =  sessionFactory.openSession().createSQLQuery(query);
        return sqlqry.list();
     }
+
+    public void setSessionFactory(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
+
+    
 
     
 

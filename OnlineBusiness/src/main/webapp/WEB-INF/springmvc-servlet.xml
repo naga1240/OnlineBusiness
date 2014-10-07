@@ -24,7 +24,7 @@
     <context:annotation-config></context:annotation-config>
     <bean id="loginController" class="com.onlinebusiness.controller.LoginController" />
     <mvc:annotation-driven></mvc:annotation-driven>
-   
+    
 
     <!-- enable custom validation messages -->
     <bean id="localeResolver"

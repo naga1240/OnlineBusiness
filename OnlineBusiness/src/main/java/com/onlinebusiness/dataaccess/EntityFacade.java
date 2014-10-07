@@ -6,7 +6,6 @@
 
 package com.onlinebusiness.dataaccess;
 
-import com.onlinebusiness.model.User;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
@@ -44,12 +43,9 @@ public interface EntityFacade<T> {
 
     public List findWithNamedQuery(String namedQueryName, Map<String, String> parameters);
 
-    public List findWithNamedQuery(String namedQueryName, Map<String, String> parameters, int resultLimit);
-
     public Object findWithNativeQuery(String queryName);
     
-    public List findWithNamedQuery(String namedQueryName, Map<String, String> parameters,Map<String, Long> parameters2);
-   
+ 
     public List getAll(T entity);
      
     public List findBySqlQuery(String query); 
