@@ -8,6 +8,7 @@
         <title>Login Page</title>
     </head>
     <body>
+    <center>
         <fieldset style="width: 40%; position: absolute;"><legend><h3>Login Page!</h3></legend>  
             <h3>
                 <table border="0">
@@ -40,5 +41,6 @@
 
 
         </fieldset>
+    </center>
     </body>
 </html>

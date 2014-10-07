@@ -6,18 +6,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="css/mystyle.css">
         <title>Register Page</title>
+      
     </head>
-    <body>
-        <h1>Register Yourself</h1>
-        <form:form commandName="customer" action="addCustomer">
-            name : <form:input path="name"/> <br/>
-            address : <form:input path="address" /> <br/>
-            email : <form:input path="email" /><br/>
-            username : <form:input path="username" /><br/>
-            password : <form:input path="password" /><br/>
+    <body> <center>
+        <h1> Registration Page</h1>
+        
+
+<form:form commandName="customer" action="addCustomer">
+            Name : <form:input path="name"/> <br/>
+            Address : <form:input path="address" /> <br/>
+            Email : <form:input path="email" /><br/>
+            Username : <form:input path="username" /><br/>
+            Password : <form:input path="password" /><br/>
             <input type="submit" value="Submit"/>
+       
         </form:form>
+             </center>
     </body>
     
 </html>

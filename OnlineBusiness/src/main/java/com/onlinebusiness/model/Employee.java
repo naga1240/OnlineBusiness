@@ -5,14 +5,12 @@
  */
 package com.onlinebusiness.model;
 
-import javax.persistence.Entity;
-
 /**
  *
  * @author Naga
  */
-@Entity
-public class Employee extends User {
+//@Entity
+public class Employee {
 
     private String name;
     private String address;
@@ -23,7 +21,7 @@ public class Employee extends User {
     }
 
     public Employee(String name, String address, String contact, String email, String username, String password) {
-        super(username, password);
+        //super(username, password);
         this.name = name;
         this.address = address;
         this.contact = contact;

@@ -1,5 +1,6 @@
 package com.onlinebusiness.controller;
 import com.onlinebusiness.model.Customer;
+import com.onlinebusiness.model.Vendor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,8 @@ public class LoginController {
         model.addAttribute("customer", new Customer());
         return "register";
     }
+    
+    
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public String logout() {
         System.out.println("In logout");
@@ -38,5 +41,15 @@ public class LoginController {
     public String loginfailed() {
         System.out.println("In loginfailed");
         return "loginfailed";
+    }
+    @RequestMapping(value = "/loginsidebar")
+    public String loginsidebar() {
+        //System.out.println("In loginfailed");
+        return "loginsidebar";
+    }
+    @RequestMapping(value = "/loginframes")
+    public String loginframes() {
+        //System.out.println("In loginfailed");
+        return "loginframes";
     }
 }

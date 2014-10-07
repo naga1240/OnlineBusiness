@@ -1,6 +1,6 @@
 <%-- 
     Document   : logout
-    Created on : Sep 16, 2014, 2:25:07 PM
+    Created on : Sep 29, 2014, 2:25:07 PM
     Author     : nirali_bheda
 --%>
 
@@ -10,6 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link rel="stylesheet" type="text/css" href="style/mystyle.css"> 
         <title>JSP Page</title>
     </head>
     <body>

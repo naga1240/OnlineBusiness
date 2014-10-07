@@ -4,15 +4,15 @@
  * and open the template in the editor.
  */
 
-package com.onlinebusiness.dao;
-
-import org.springframework.stereotype.Repository;
+package com.onlinebusiness.dataaccess;
 
 /**
  *
  * @author Naga
  */
-@Repository
-public class CustomerDao {
-    
+public class DataFacadeFactory {
+    public CRUDFacade getDataFacadeInstance(){
+        return null;
+    }
+      
 }

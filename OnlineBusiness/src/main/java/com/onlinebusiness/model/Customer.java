@@ -7,6 +7,7 @@ package com.onlinebusiness.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
@@ -15,11 +16,8 @@ import javax.persistence.OneToMany;
  * @author Naga
  */
 @Entity
+@DiscriminatorValue(value="ROLE_USER")
 public class Customer extends User {
-
-    private String name;
-    private String address;
-    private String email;
 
     @OneToMany(mappedBy = "customer")
     private List<Order> orderList = new ArrayList<Order>();
@@ -46,35 +44,10 @@ public class Customer extends User {
     public Customer() {
     }
 
-    public Customer(String name, String address, String email, String username, String password) {
-        super(username, password);
-        this.name = name;
-        this.address = address;
-        this.email = email;
+    
+    public Customer(String username, String password, String name, String address, String contact, String email) {
+        super(username, password, name, address, contact, email);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
+    
 }

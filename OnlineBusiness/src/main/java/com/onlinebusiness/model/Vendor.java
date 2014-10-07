@@ -7,6 +7,7 @@ package com.onlinebusiness.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 
@@ -15,10 +16,10 @@ import javax.persistence.OneToMany;
  * @author Naga
  */
 @Entity
+@DiscriminatorValue(value="ROLE_VENDOR")
 public class Vendor extends User {
 
-    private String name;
-    private String details;
+    
 
     @OneToMany(mappedBy = "vendor")
     private List<Product> productList = new ArrayList<Product>();
@@ -34,26 +35,10 @@ public class Vendor extends User {
     public Vendor() {
     }
 
-    public Vendor(String name, String details, String username, String password) {
-        super(username, password);
-        this.name = name;
-        this.details = details;
+    public Vendor(String username, String password, String name, String address, String contact, String email) {
+        super(username, password, name, address, contact, email);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDetails() {
-        return details;
-    }
-
-    public void setDetails(String details) {
-        this.details = details;
-    }
+    
 
 }
