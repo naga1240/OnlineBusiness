@@ -35,8 +35,8 @@ public class Vendor extends User {
     public Vendor() {
     }
 
-    public Vendor(String username, String password, String name, String address, String contact, String email) {
-        super(username, password, name, address, contact, email);
+    public Vendor(String username, String password, String name, String address, String contact, String email,boolean enabled) {
+        super(username, password, name, address, contact, email,enabled);
     }
 
     

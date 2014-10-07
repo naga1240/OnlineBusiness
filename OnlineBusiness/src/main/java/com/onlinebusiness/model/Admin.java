@@ -32,8 +32,8 @@ public class Admin extends User {
         this.vendorList = vendorList;
     }
 
-    public Admin(String username, String password, String name, String address, String contact, String email) {
-        super(username, password, name, address, contact, email);
+    public Admin(String username, String password, String name, String address, String contact, String email,boolean enabled) {
+        super(username, password, name, address, contact, email,enabled);
     }
 
     public Admin() {

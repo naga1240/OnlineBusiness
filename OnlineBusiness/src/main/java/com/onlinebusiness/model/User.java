@@ -28,20 +28,31 @@ public abstract class User {
     private String address;
     private String contact;
     private String email;
+    private boolean enabled; 
     
 
     public User() {
     }
 
-    public User(String username, String password, String name, String address, String contact, String email) {
+    public User(String username, String password, String name, String address, String contact, String email, boolean enabled) {
         this.username = username;
         this.password = password;
         this.name = name;
         this.address = address;
         this.contact = contact;
         this.email = email;
+        this.enabled=enabled;
     }
 
+    public boolean isEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    
     public String getName() {
         return name;
     }
