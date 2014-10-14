@@ -18,12 +18,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class adminController {
      @RequestMapping(value = "addVendor", method = RequestMethod.POST)
     public String register(Vendor vendor){
-        System.out.println(vendor.getName());
+//        System.out.println(vendor.getName());
         return "registerSuccess";
     }
      @RequestMapping(value = "adminAddVendor")
     public String adminAddVendor(Vendor vendor, Model model){
-        System.out.println(vendor.getName());
+//        System.out.println(vendor.getName());
         model.addAttribute("vendor", new Vendor());
         return "adminAddVendor";
     }

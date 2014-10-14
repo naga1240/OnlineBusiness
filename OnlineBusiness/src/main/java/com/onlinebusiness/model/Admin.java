@@ -5,38 +5,67 @@
  */
 package com.onlinebusiness.model;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.OneToMany;
 
 /**
  *
  * @author Naga
  */
 @Entity
-@DiscriminatorValue(value="ROLE_ADMIN")
+//@DiscriminatorValue(value="ROLE_ADMIN")
 public class Admin extends User {
 
-     
-    
-    @OneToMany
-    private List<Vendor> vendorList = new ArrayList<Vendor>();
+    private String name;
+    private String contact;
+    private String email;
 
-    public List<Vendor> getVendorList() {
-        return vendorList;
-    }
-
-    public void setVendorList(List<Vendor> vendorList) {
-        this.vendorList = vendorList;
-    }
-
-    public Admin(String username, String password, String name, String address, String contact, String email,boolean enabled) {
-        super(username, password, name, address, contact, email,enabled);
+//
+//    @OneToMany
+//    private List<Vendor> vendorList = new ArrayList<Vendor>();
+//
+//    public List<Vendor> getVendorList() {
+//        return vendorList;
+//    }
+//
+//    public void setVendorList(List<Vendor> vendorList) {
+//        this.vendorList = vendorList;
+//    }
+    public Admin(String name, String contact, String email, String username, String password, String userrole, boolean enabled) {
+        super(username, password, userrole, enabled);
+        this.name = name;
+        this.contact = contact;
+        this.email = email;
     }
 
     public Admin() {
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    
+
+   
     
 }

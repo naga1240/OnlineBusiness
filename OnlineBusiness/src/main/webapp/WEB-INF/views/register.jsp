@@ -14,9 +14,10 @@
         <h1> Registration Page</h1>
         
 
-<form:form commandName="customer" action="addCustomer">
+<form:form commandName="customer" action="registerNew">
             Name : <form:input path="name"/> <br/>
             Address : <form:input path="address" /> <br/>
+            Contact : <form:input path="contact" /><br/>
             Email : <form:input path="email" /><br/>
             Username : <form:input path="username" /><br/>
             Password : <form:input path="password" /><br/>

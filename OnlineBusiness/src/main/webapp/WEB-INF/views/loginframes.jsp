@@ -12,11 +12,11 @@
         <title>JSP Page</title>
     </head>
     
-        <frameset rows="10%,*">
-<frame src="loginsidebar" name="frame1"scrolling="no">
+        <frameset rows="10%,*" frameborder="0">
+<frame src="header" name="frame1" scrolling="no">
 <frameset cols="20%,*">
-<frame src="loginsidebar" name="frame2">
-<frame src="login" name="frame3">
+<frame src="loginsidebar" name="frame2" frameborder="0">
+<frame src="login" name="frame3" frameborder="0">
 </frameset>
 </frameset>
     
